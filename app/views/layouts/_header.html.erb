@@ -10,25 +10,29 @@
 </head>
 
 <header>
-	<ul>
-		<% if user_signed_in?%>
-		<li>
-			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-		</li>
-		<li>
-			<%= link_to "Edit Account", edit_user_registration_path  %>
-		</li>
-		<li>
-			<%= current_user.email %>
-		</li>
-
-		<% else %>
-		<li>
-			<%= link_to "Sign in", new_user_session_path %>
-		</li>
-		<li>
-			<%=  link_to "sign UP", new_user_registration_path  %>
-		</li>
-		<% end %>
-	</ul>
+	<div class="container">
+		<nav class="main-nav navbar navbar-expand-md navbar-dark" role="navigation">
+			<div id="logosite col-xs-3"><%= image_tag("logo.png",class: "logo") %></div>
+			<div id="navbar-collapse" class="navbar-collapse collapse justify-content-end">
+				<ul class="nav navbar-nav">
+					<li class="active nav-item"><a class="nav-link" href="#">Home</a></li>
+					<li class="active nav-item"><a class="nav-link" href="index.html">Maps</a></li>
+					<li class="active nav-item"><a class="nav-link" href="index.html">Mes Trips</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" >Connexion <i class="fa fa-angle-down"></i></a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<% if user_signed_in? %>
+							<%= current_user.email %> 
+							<a class="dropdown-item" href="/users/edit">Modifier</a>
+							<%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item"%>
+							<% else %>
+							<a class="dropdown-item" href="/users/sign_up">S'inscrire</a>
+							<a class="dropdown-item" href="/users/sign_in">Se connecter</a>
+							<% end %><!--//user connexion-->
+						</div>
+					</li><!--//dropdown--> 
+				</ul><!--//nav-->
+			</div><!--//navabr-collapse-->
+		</nav><!--//main-nav-->
+	</div>
 </header>
