@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>IMakeMyTrip</title>
-    <%= favicon_link_tag 'http://www.freeiconspng.com/uploads/--holiday-sea-summer-travel-vacation-icon--icon-search-engine-27.png' %> <!-- sert à appeler la petite icone d'onglet-->
-    <%= csrf_meta_tags %>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <title>I Make My Trip</title>
+  <%= favicon_link_tag 'http://www.freeiconspng.com/uploads/--holiday-sea-summer-travel-vacation-icon--icon-search-engine-27.png' %> <!-- sert à appeler la petite icone d'onglet-->
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
   <body>
   	<%= render '/layouts/header' %> <!-- sert à appeler le header qui figurera sur toutes les pages du site-->
+    
     <%= yield %>
 
     <%= debug user_signed_in? %> <!-- sert à afficher la valeur directement dans la page car tu peux pas voir dans la console rails (réservée à la BDD)-->

@@ -355,7 +355,7 @@ h1.logo{
   background: none;
 }
 .header .main-nav .nav .nav-item.active {
-  color: #71c4e0;
+  color: #52ba50;
 }
 .header .main-nav .nav .nav-item.last {
   margin-right: 0;
@@ -398,7 +398,7 @@ h1.logo{
   border: none;
   text-transform: none;
   min-width: 180px;
-  background: #47b3d7;
+  background: #44a043;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -409,13 +409,13 @@ h1.logo{
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid #47b3d7;
+  border-bottom: 10px solid #44a043;
   position: absolute;
   right: 35px;
   top: -8px;
 }
 .header .main-nav .nav .dropdown-menu a {
-  border-bottom: 1px solid #32aad2;
+  border-bottom: 1px solid #44a043;
   padding: 8px 20px;
   color: #fff;
   -webkit-opacity: 1;
@@ -424,7 +424,7 @@ h1.logo{
   font-size: 14px;
 }
 .header .main-nav .nav .dropdown-menu a:hover {
-  background: #2a9bc1;
+  text-decoration: underline;
   color: #fff;
 }
 /* Override bootstrap default */
@@ -2485,3 +2485,6 @@ h1.logo{
     min-height: 520px;
   }
 }
+
+
+
