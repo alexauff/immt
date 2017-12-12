@@ -7,7 +7,7 @@
 */
 /* ======= Base ======= */
 body {
-  font-family: 'Merriweather Sans', arial, sans-serif;
+  font-family: 'Merriweather Sans', 'Open Sans', 'arial', 'sans-serif';
   color: #666;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -189,21 +189,21 @@ select {
   height: 650px;
 }
 .bg-slider-wrapper .flexslider .slide.slide-1 {
-  background: #65758e url('../images/background/promo-background-1.jpg') no-repeat 50% top;
+  background: #65758e url('slide1.jpg') no-repeat 50% top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .bg-slider-wrapper .flexslider .slide.slide-2 {
-  background: #65758e url('../images/background/promo-background-2.jpg') no-repeat 50% top;
+  background: #65758e url('slide2.jpg') no-repeat 50% top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .bg-slider-wrapper .flexslider .slide.slide-3 {
-  background: #65758e url('../images/background/promo-background-3.jpg') no-repeat 50% top;
+  background: #65758e url('slide3.jpg') no-repeat 50% top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -523,7 +523,7 @@ h1.logo{
   font-size: 36px;
   color: #65758e;
 }
-.who .benefits .item-inner {
+.who .benefits .item-inner .image {
   padding: 30px;
   padding-top: 45px;
   background: #f8f9fa;
@@ -703,8 +703,10 @@ h1.logo{
 .testimonials .item {
   margin-bottom: 60px;
 }
-.testimonials .item .item-inner {
+.testimonials .item .item-inner .images{
   padding: 30px;
+  width: 100px;
+  height: 70px; 
 }
 .testimonials .item .quote-container {
   position: relative;
@@ -2511,3 +2513,31 @@ h1.logo{
 
 
 
+
+/********************************  Page Maps  ************************************/
+
+/****** boite maps  ******/
+.box-carte-page-maps{
+    background-color: skyblue;
+    padding-bottom: 20px;
+
+}
+.box-carte-page-maps li{
+        list-style: none;
+}
+
+
+.liste-page-maps{
+    background-color: pink;
+
+}
+.carte-page-maps{
+    background-color: greenyellow;
+    height: 250px;
+}
+
+/****** resultats  ******/
+
+.title-result-page-maps{
+    background-color: aqua;
+}
