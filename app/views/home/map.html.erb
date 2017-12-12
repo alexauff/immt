@@ -37,9 +37,18 @@
                 <button class="btn button" data-filter=".montrajet">Ajouter à mon trajet +</button>
             </ul>
         </div>
-        <div class="carte-page-maps col-xl-9 col-md-9 col-12">
-            <p>Carte</p>
+        <div id="map"class="col-xl-9 col-md-9 col-12">
         </div>
+        
+        <div>
+            <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+
+        </div>
+
+        <div id="result">
+
+        </div>
+        
         <!--//item-inner-->
     </div>
     <!--//item-->
@@ -755,3 +764,9 @@
     <!--//container-fluid-->
 </section>
 <!--//suggestions"-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+ <%= javascript_include_tag "/assets/javascripts/search-trip.js" %>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpvaZc6ZbCzujG45MRbYoUPt7Cg_vGb9E&amp;libraries=places&amp;callback=initMap" async="" defer=""></script>

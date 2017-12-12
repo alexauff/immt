@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-<head>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="stylesheet" type="text/css" href="/style.scss" />
   <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <title>I Make My Trip</title>
   <%= favicon_link_tag 'http://www.freeiconspng.com/uploads/--holiday-sea-summer-travel-vacation-icon--icon-search-engine-27.png' %> <!-- sert à appeler la petite icone d'onglet-->
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 
@@ -23,5 +21,6 @@
     
     <%= render '/layouts/footer' %> <!-- sert à appeler le footer qui figurera sur toutes les pages du site-->
 
+ <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
