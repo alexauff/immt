@@ -2491,3 +2491,31 @@ h1.logo{
 
 
 
+
+/********************************  Page Maps  ************************************/
+
+/****** boite maps  ******/
+.box-carte-page-maps{
+    background-color: skyblue;
+    padding-bottom: 20px;
+
+}
+.box-carte-page-maps li{
+        list-style: none;
+}
+
+
+.liste-page-maps{
+    background-color: pink;
+
+}
+.carte-page-maps{
+    background-color: greenyellow;
+    height: 250px;
+}
+
+/****** resultats  ******/
+
+.title-result-page-maps{
+    background-color: aqua;
+}
