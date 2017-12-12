@@ -2516,6 +2516,21 @@ h1.logo{
 
 /********************************  Page Maps  ************************************/
 
+
+.boutons-menu-maps{
+    color: white; margin-bottom: 20px;
+}
+.boutons-menu-maps button{
+    color: springgreen; margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
 /****** boite maps  ******/
 .box-carte-page-maps{
     background-color: skyblue;
