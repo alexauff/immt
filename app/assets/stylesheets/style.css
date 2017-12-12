@@ -2517,11 +2517,10 @@ h1.logo{
 /********************************  Page Maps  ************************************/
 
 
-.boutons-menu-maps{
-    color: white; margin-bottom: 20px;
-}
 .boutons-menu-maps button{
-    color: springgreen; margin-bottom: 20px;
+    color: springgreen;
+    background-color: orange;
+    margin-bottom: 20px;
 }
 
 
@@ -2559,4 +2558,12 @@ h1.logo{
 
 .villes-page-trips{
     background-color: paleturquoise;
+}
+
+
+
+/****** liste des résultats  ******/
+
+.image-result{
+    height: 200px;
 }
