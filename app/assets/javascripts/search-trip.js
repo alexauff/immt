@@ -4,7 +4,6 @@
 
 var showResults;
 var scrollTo;
-
 var map;
 var service;
 var appKey = 'AIzaSyBpvaZc6ZbCzujG45MRbYoUPt7Cg_vGb9E';
@@ -170,6 +169,8 @@ jQuery(function ($) {
 
                 var placeId = place.place_id; // afficher id du lieu
                 var placeName = place.name; // afficher nom du lieu
+                var placeRating = place.rating;
+                var placeWebsite = place.website;
                 var placeRate = place.rate;
                 var placeOpen;
                 if (typeof place.opening_hours != 'undefined' && typeof place.opening_hours.open_now != 'undefined') {
@@ -197,7 +198,7 @@ jQuery(function ($) {
                 } else {
                     placeCover = '/assets/place-default.jpg';
                 }
-                $('#search-result').append('<div id="' + placeId + '"class="item startup box-recherche website col-lg-3 col-md-4 col-sm-6"><div class="item-inner"><figure class="figure"><img src="' + placeCover + '" /></figure><div class="content text-left"><p>' + place.name + ' | open : ' + placeOpen + '<a href="#" id="' + placeId + '" class="add-trip"> Ajouter a mon trip</a></p></div></div></div>'); // on renseigne la liste des resultats à l'endroit indiqué
+                $('#search-result').append('<div id="' + placeId + '"class="item startup box-recherche website col-lg-3 col-md-4 col-sm-6"><div class="item-inner"><figure class="figure"><img src="' + placeCover + '" /></figure><div class="content text-left"><p>' + place.name + ' | open : ' + placeOpen + '<p>' + placeRating + '</p><a href="#" id="' + placeId + '" class="add-trip"> Ajouter a mon trip</a></p></div></div></div>'); // on renseigne la liste des resultats à l'endroit indiqué
 
                 $('.add-trip').on('click', function (e) {
                     e.preventDefault();
