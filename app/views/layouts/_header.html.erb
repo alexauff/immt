@@ -1,5 +1,4 @@
-<header id="header" class="header fixed-top">  
-
+<header id="header" class="header fixed-top">
     <div class="container">       
         <h1 class="logo">
             <a href="/"><%= image_tag("logo_header.png") %></a>
@@ -21,59 +20,80 @@
                             <div class="modal-dialog">
 
                                 <!-- Modal content-->
+                                <p class="text-center">
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#loginModal">Se connecter</button>
+                                </p>
+
+                                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h5 class="modal-title">Se connecter</h5>
+                                                <p>Connectez-vous pour enregistrer votre trajet</p>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                    <!-- The form is placed inside the body of modal -->
+                                                    <form id="loginForm" method="post" class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-3 control-label">Email</label>
+                                                            <div class="col-xs-5">
+                                                                <input type="text" class="form-control" name="username" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-xs-3 control-label">Mot de passe</label>
+                                                            <div class="col-xs-5">
+                                                                <input type="password" class="form-control" name="password"/>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <div class="col-xs-5 col-xs-offset-3">
+                                                                <button type="submit" class="btn btn-primary">Se connecter</button>
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Modal Header</h4>
+                                        <p class="modal-title">Pour enregistrer votre trajet</p>
                                     </div>
                                     <div class="modal-body">
-                                      <p>Some text in the modal.</p>
-                                  </div>
-                                  <div class="modal-footer">
-                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                  </div>
-            <div class="container">       
-                <h1 class="logo">
-                    <a href="#"><%= image_tag("logo_header.png") %></a>
-                </h1><!--//logo-->
-                <nav class="main-nav navbar navbar-expand-md navbar-dark" role="navigation">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbars-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div id="navbar-collapse" class="navbar-collapse collapse justify-content-end">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="/map">Maps</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/trips">Mes Trips</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Connexion <i class="fa fa-angle-down"></i></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <% if user_signed_in? %>
-											<%= current_user.email %> 
-										<a class="dropdown-item" href="/users/edit">Modifier</a>
-											<%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item"%>
-									<% else %>
-										<a class="dropdown-item" href="/users/sign_up">S'inscrire</a><br/>
-										<a class="dropdown-item" href="/users/sign_in">Se connecter</a>
-									<% end %><!--//user connexion-->
+                                        <p>Some text in the modal.</p>
+                                        <% if user_signed_in? %>
+                                        <%= current_user.name %> 
+                                        <a class="dropdown-item" href="/users/edit">Modifier</a>
+                                        <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item"%>
+                                        <% else %>
+                                        <a class="dropdown-item" href="/users/sign_up">S'inscrire</a><br/>
+                                        <a class="dropdown-item" href="/users/sign_in">Se connecter</a>
+                                        <% end %><!--//user connexion-->
+                                    </div>
+                                    <div class="modal-footer">
+                                        <p>Vous n'avez pas de compte ?</p>
+                                        <button class="dropdown-item" href="/users/sign_up">S'inscrire</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- Trigger the modal with a button -->         
                         </div>
-                      <!-- Trigger the modal with a button -->
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <% if user_signed_in? %>
-                        <%= current_user.name %> 
-                        <a class="dropdown-item" href="/users/edit">Modifier</a>
-                        <a rel="nofollow" data-method="DELETE" href="/users/sign_out">Déconnexion</a>
-                        <% else %>
-                        <a class="dropdown-item" href="/users/sign_up">S'inscrire</a><br/>
-                        <a class="dropdown-item" href="/users/sign_in">Se connecter</a>
-                        <% end %><!--//user connexion-->           
-                    </div>
-                </li><!--//dropdown--> 
-            </ul><!--//nav-->
-        </div><!--//navabr-collapse-->
-    </nav><!--//main-nav-->
-</div><!--//container-->
+                    </li><!--//dropdown--> 
+                </ul><!--//nav-->
+            </div><!--//navabr-collapse-->
+        </nav><!--//main-nav-->
+    </div><!--//container-->
 </header><!--//header-->  
 
 
