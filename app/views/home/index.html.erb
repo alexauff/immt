@@ -1,7 +1,58 @@
+<!-- slider -->
+
+            <div class="contain_slide">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+        <ol class="carousel-indicators">
+         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" >
+      
+
+      <div class="item">
+        <img src="assets/slide1.JPG" alt="s1"  class="imgslider" style="width:100%; height:600px; ">
+          <div class="carousel-caption">
+            <h2>Ceci est un Texte</h2>
+              <p>Lorem ipsum Lorem ipsum alterag ujdos peitn haou pt </p>
+          </div>
+      </div>
+    
+      <div class="item">
+        <img src="assets/slide2.JPG" alt="s2"  class="imgslider" style="width:100%; height:600px; ">
+          <div class="carousel-caption">
+            <h2>Ceci est un Texte</h2>
+              <p>Lorem ipsum Lorem ipsum alterag ujdos peitn haou pt </p>
+          </div>
+      </div>
+
+      <div class="item active">
+        <img src="assets/slide3.JPG" alt="s3" class="imgslider" style="width:100%; height:600px; ">
+          <div class="carousel-caption">
+            <h2 class="textng">Ceci est un Texte</h2>
+              <p>Lorem ipsum Lorem ipsum alterag ujdos peitn haou pt </p>
+          </div>
+        </div>
+      </div>
+
+<!-- fin du slider -->
+
+<br>
+<br>
+
 <section id="who" class="who section">
         <div class="container text-center">
             <h2 class="title text-center">En visite à</h2>
             <p class="intro text-center">Choisissez votre destination et un planning déjà prévu par d'autres voyageurs ou personnalisez-le avec le boutton "Your Trip !". Enjoy !</p>
+
+
+
+
+
+
             <div class="row benefits text-center">
                 <div class="item col-lg-3 col-md-4 col-sm-6 box-home-londres">
                     <div class="item-inner">
@@ -28,14 +79,14 @@
                     </div><!--//item-inner-->              
                 </div><!--//item-->
             </div><!--//row-->
-            <a class="btn btn-cta btn-cta-secondary" href="about.html">Your Trip !</a>
+            <a class="btn btn-cta btn-cta-secondary" href="/map">Your Trip !</a>
         </div><!--//container-->
     </section><!--//who-->
 
 <!-- ******Latest blog Section****** -->
     <section id="latest-blog" class="latest-blog section">
         <div class="container">
-            <h2 class="title text-center">Ils ont choisi :</h2>
+            <h2 class="title text-center">Des idées de voyages :</h2>
             <div class="row">
                 <div class="item col-md-6 col-12">
                     <div class="item-inner">
@@ -43,9 +94,9 @@
                             <a href="blog-post.html"><%= image_tag("thailand-2.jpg") %></a>
                         </figure>
                         <div class="content-wrapper text-center">
-                            <h3 class="sub-title"><a href="blog-post.html">Deux semaines en Thaïlande</a></h3>
+                            <h3 class="sub-title"><a href="blog-post.html">Les choses à faire en Thaïlande</a></h3>
                             <div class="desc">
-                                <p>Marie et Léa sont parties en Thaïlande. Elles ont visité Bangkok, Chiang Mai et Phuket. Elles avaient tout prévues et ont pu partir tranquillement faire leur voyage.</p>
+                                <p>Marie et Léa sont parties en Thaïlande. Elles ont visité Bangkok, Chiang Mai et Phuket et nous recommande vivement plusieurs activités à faire.</p>
                             </div><!--//desc-->
                         </div><!--//content-wrapper text-center-->
                     </div><!--//item-inner-->
@@ -54,12 +105,12 @@
                 <div class="item col-md-6 col-12">
                     <div class="item-inner">
                         <figure class="figure images-box">
-                            <a href="blog-post.html"><img class="img-fluid" src="thailand.jpg" alt="" /></a>
+                            <a href="blog-post.html"><%= image_tag("islande.jpg") %></a>
                         </figure>
                         <div class="content-wrapper text-center">
-                            <h3 class="sub-title"><a href="blog-post.html">devAid - Free Bootstrap Theme</a></h3>
+                            <h3 class="sub-title"><a href="blog-post.html">A la conquète des aurores boréales</a></h3>
                             <div class="desc">
-                                <p>Mauris libero leo, dapibus a congue ut, mollis sed nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus augue nec nulla ultricies, <a href="http://themes.3rdwavemedia.com/website-templates/devaid-free-bootstrap-theme-developers/" target="_blank">Download now</a> vitae tincidunt lacus scelerisque.</p>
+                                <p>Léo a entrepis une chasse des aurores boréales seul. Pour cela il à fait la Norvège, l'Islande, la Suède puis la Finlande. Un spectacle magique qui lui a permis de découvrir de nouveaux pays.</p>
                             </div><!--//desc-->
                         </div><!--//content-wrapper text-center-->
                     </div><!--//item-inner-->
@@ -68,12 +119,12 @@
                 <div class="item col-md-6 col-12">
                     <div class="item-inner">
                         <figure class="figure images-box">
-                            <a href="blog-post.html"><img class="img-fluid"  src="assets/images/blog/blog-thumb-3.jpg" alt="" /></a>
+                            <a href="blog-post.html"><%= image_tag("cancun.jpg") %></a>
                         </figure>
                         <div class="content-wrapper text-center">
-                            <h3 class="sub-title"><a href="blog-post.html">DevStudio Team Lorem Ipsum</a></h3>
+                            <h3 class="sub-title"><a href="blog-post.html">Un séjour à Cancùn</a></h3>
                             <div class="desc">
-                                <p>In vel mauris consequat, ullamcorper diam id, eleifend tellus. Phasellus elementum facilisis eleifend. Nullam imperdiet odio massa, et blandit augue porta vehicula. Proin venenatis ullamcorper enim, in vulputate nisi luctus eget. Justo vitae tincidunt vestibulum. Cras consectetur lacinia massa.</p>
+                                <p>On cherche toujours un endroit paradisiaque pour poser ses valises. Et pourquoi pas a Cancùn? Une ville Mexicaine qui vous fera rêver avec ses plages des Caraïbes.</p>
                             </div><!--//desc-->
                         </div><!--//content-wrapper text-center-->
                     </div><!--//item-inner-->
@@ -81,12 +132,12 @@
                 <div class="item col-md-6 col-12">
                     <div class="item-inner">
                         <figure class="figure images-box">
-                            <a href="blog-post.html"><img class="img-fluid" src="assets/images/blog/blog-thumb-4.jpg" alt="" /></a>
+                            <a href="blog-post.html"><%= image_tag("montreal-2.jpg") %></a>
                         </figure>
                         <div class="content-wrapper text-center">
-                            <h3 class="sub-title"><a href="blog-post.html">Our Consectetur Adipiscing</a></h3>
+                            <h3 class="sub-title"><a href="blog-post.html">Noël au Québec</a></h3>
                             <div class="desc">
-                                <p>Aenean eget molestie ipsum, in commodo felis. Sed vitae enim est. Nunc at eros id purus vulputate elementum in vel nisi. Donec tempus turpis et viverra semper. Curabitur facilisis sem elit, vitae condimentum enim auctor ac. Sed orci magna, euismod eu mi eu, fringilla tincidunt orci. Phasellus molestie.</p>
+                                <p>Chloé et Mathieu l'on fait! Un séjour en amoureux inoubliable pour une fin d'année enneigé. Découvrez vous aussi l'accueil chaleureux des Québequois. </p>
                             </div><!--//desc-->
                         </div><!--//content-wrapper text-center-->
                     </div><!--//item-inner-->
