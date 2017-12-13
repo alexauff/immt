@@ -43,8 +43,8 @@ function initMap() {
 
         var request = {
             location: place.geometry.location, // on lui indique la localisation où chercher les points d'interet
-            radius: '500', // on lui indique dans quel rayon chercher les points d'interets
-            types: ['places'] // on lui indique quel type de Places on recherche
+            radius: '10000', // on lui indique dans quel rayon chercher les points d'interets
+            types: ['all'] // on lui indique quel type de Places on recherche
         };
 
         service = new google.maps.places.PlacesService(map);
