@@ -2493,12 +2493,12 @@ h1.logo{
 .box-home-londres{
   background-image: url("londres.jpg");
   background-repeat: no-repeat;
-  filter: grayscale(1);
+  filter: grayscale(0);
   padding-right: 10px;
   height: 165px;
 }
 .box-home-londres:hover{
-  filter: grayscale(0);
+  filter: grayscale(1);
 }
 .box-home-londres h3{
   color: white !important;
@@ -2508,13 +2508,13 @@ h1.logo{
 .box-home-paris{
   background-image: url("paris.jpg");
   background-repeat: no-repeat;
-  filter: grayscale(1);
+  filter: grayscale(0);
   padding-right: 10px;
   height: 165px;
   
 }
 .box-home-paris:hover{
-  filter: grayscale(0);
+  filter: grayscale(1);
   }
 .box-home-paris h3{
   color: white !important;
@@ -2524,12 +2524,12 @@ h1.logo{
 .box-home-new-york{
   background-image: url("new-york.jpg");
   background-repeat: no-repeat;
-  filter: grayscale(1);
+  filter: grayscale(0);
   padding-right: 10px;
   height: 165px;
 }
 .box-home-new-york:hover{
-  filter: grayscale(0);
+  filter: grayscale(1);
 }
 .box-home-new-york h3{
   color: white !important;
@@ -2539,18 +2539,24 @@ h1.logo{
 .box-home-la {
  background-image: url("la.jpg");
  background-repeat: no-repeat;
- filter: grayscale(1);
+ filter: grayscale(0);
  padding-left: 10px;
  height: 165px;
 }
 .box-home-la:hover {
- filter: grayscale(0);
+ filter: grayscale(1);
 }
 .box-home-la h3{
   color: white !important;
   font-size: 30px !important;
   padding-top: 40px;
 }
+
+/****** Ils ont choisi:  ******/
+.images-box{
+  height: 300px;
+}
+
 
 /********************************  Page Maps  ************************************/
 
