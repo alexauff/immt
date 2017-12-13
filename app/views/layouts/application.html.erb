@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
   <meta charset="utf-8">
-
   <link rel="stylesheet" type="text/css" href="/assets/style.scss" />
-
   <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/style.scss" />
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -20,23 +21,21 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
+<%= render '/layouts/header' %> <!-- sert à appeler le header qui figurera sur toutes les pages du site-->
 
-  <body>
-  	<%= render '/layouts/header' %> <!-- sert à appeler le header qui figurera sur toutes les pages du site-->
+<%= yield %>
 
-    <%= yield %>
+<%= debug user_signed_in? %> <!-- sert à afficher la valeur directement dans la page car tu peux pas voir dans la console rails (réservée à la BDD)-->
 
-    <%= debug user_signed_in? %> <!-- sert à afficher la valeur directement dans la page car tu peux pas voir dans la console rails (réservée à la BDD)-->
-    
-    <%= render '/layouts/footer' %> <!-- sert à appeler le footer qui figurera sur toutes les pages du site-->
+<%= render '/layouts/footer' %> <!-- sert à appeler le footer qui figurera sur toutes les pages du site-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/search-trip.js"></script>
-    
-    <script type="text/javascript" src="/assets/add-a-trip.js"></script>
-    
-    <script type="text/javascript" src="/assets/add-marker.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/search-trip.js"></script>
+<script type="text/javascript" src="/assets/popin.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/add-a-trip.js"></script>
+<script type="text/javascript" src="/assets/add-marker.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpvaZc6ZbCzujG45MRbYoUPt7Cg_vGb9E&amp;libraries=places&amp;callback=initMap" async="" defer=""></script>
-  </body>
+</body>
 </html>
