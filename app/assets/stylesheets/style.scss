@@ -2992,6 +2992,13 @@ h1.logo {
 
 /********************************  Home Page  ************************************/
 
+/****** Slider  ******/
+
+.slider-home{
+    clear: both;
+}
+
+
 /****** En visite à:  ******/
 
 .box-home-londres {
@@ -3123,7 +3130,7 @@ h1.logo {
 .box-recherche img {
     height: 200px;
     
-    width: 100%;
+    max-width: 100%;
 }
 
 .box-recherche {
