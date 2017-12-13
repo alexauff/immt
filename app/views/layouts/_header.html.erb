@@ -52,7 +52,7 @@
 										<a class="dropdown-item" href="/users/edit">Modifier</a>
 											<%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item"%>
 									<% else %>
-										<a class="dropdown-item" href="/users/sign_up">S'inscrire</a><br/>
+										<button class="dropdown-item" href="/users/sign_up">S'inscrire</button><br/>
 										<a class="dropdown-item" href="/users/sign_in">Se connecter</a>
 									<% end %><!--//user connexion-->
                                 </div>
