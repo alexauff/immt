@@ -127,7 +127,7 @@ function initialize() {
         zoom: 15
     });
 
-    // Google.places API : On défini la requette pour les places Google
+    // Google.places API : On définit la requête pour les places Google
     var request = {
         location: searchLocalisation, // on lui indique la localisation où chercher les points d'interet
         radius: '500', // on lui indique dans quel rayon chercher les points d'interets
