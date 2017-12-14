@@ -3,8 +3,10 @@
     <p class="intro text-center" style="color: pink;">Personnalisez votre trajet avec la carte interactive</p>
     <div class="container text-center">
         <div id="filters" class="button-group clearfix boutons-menu-maps">
-            <button class="btn button" data-filter=".new" >Créer mon itinéraire</button>
             <button class="btn button" data-filter=".mestrips">Voir mes lieux</button>
+                <div>
+                    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+                 </div>
             <button class="btn button" data-filter=".musees">Enregistrer mon trajet</button>
         <div>
             <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
@@ -45,7 +47,7 @@
         <div id="map"class="col-xl-9 col-md-9 col-12">
         </div>
         
-
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
         <div id="result">
 
