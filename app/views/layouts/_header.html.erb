@@ -13,6 +13,17 @@
                     <li class="nav-item"><a class="nav-link" href="/map">Maps</a></li>
                     <li class="nav-item"><a class="nav-link" href="/trips">Mes Trips</a></li>
                     <li class="nav-item"><a class="nav-link dropdown-toggle " data-toggle="modal"  data-hover="dropdown" data-delay="0" data-target="#myModal" data-close-others="false" data-toggle="modal" data-target="#myModal" >Connexion<i class="fa fa-angle-down"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                                    <% if user_signed_in? %>
+                                    <%= current_user.email %> 
+                                    <a class="dropdown-item" href="/users/edit">Modifier</a>
+                                    <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item"%>
+                                    <% else %>
+                                    <button class="dropdown-item" href="/users/sign_up">S'inscrire</button><br/>
+                                    <!-- <a class="dropdown-item" href="/users/sign_in">Se connecter</a> -->
+                                    <% end %><!--//user connexion-->
+                        </div>
+
                         <!-- Apparition Modal -->
                         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
                         aria-hidden="true">
