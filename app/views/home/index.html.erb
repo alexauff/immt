@@ -3,58 +3,28 @@
 <div class="contain_slide slider-home">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
-        <ol class="carousel-indicators">
+        <div class= "text-slider"><h1>Bienvenue sur notre site </h1>
+        <p>Préparez votre voyage de a à z avec I Make my Trip</p></div>
+        <ul class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+        </ul>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner filtre-slider">
 
 
             <div class="item slider-images">
-                 <%= image_tag("slide1.jpg") %>
-                <div class="carousel-caption">
-                    <h1 class="textng">Bienvenue sur notre site </h1>
-                    <p>Préparez votre voyage de a à z avec I Make my Trip</p>
-                     <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    
-                </div>
+                <%= image_tag("slide1.jpg") %>
             </div>
 
             <div class="item slider-images">
                 <%= image_tag("slide2.jpg") %>
-                <div class="carousel-caption">
-                    <h1 class="textng">Bienvenue sur notre site </h1>
-                    <p>Préparez votre voyage de a à z avec I Make my Trip</p>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    
-                
-                </div>
             </div>
 
             <div class="item active slider-images">
                 <%= image_tag("slide3.jpg") %>
-                <div class="carousel-caption">
-                    <h1 class="textng">Bienvenue sur notre site</h1>
-                    <p>Préparez votre voyage de a à z avec I Make my Trip</p>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    
-                 
-                </div>
             </div>
         </div>
     </div>
@@ -73,16 +43,14 @@
                     <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12 box-home">
                         <div class="item-inner">
                             <h4 class="sub-title titre-box">Londres</h4>
-
-                            <%= image_tag("londres.jpg", :class => "fs1") %>
-
+                            <%= image_tag("londres.jpg") %>
                         </div>
                     </div>
                     <!--//item-->
                     <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12 box-home">
                         <div class="item-inner">
                             <h4 class="sub-title titre-box">Paris</h4>
-                            <%= image_tag("paris.jpg", :class => "fs1")%>
+                            <%= image_tag("paris.jpg")%>
                         </div>
                         <!--//item-inner-->
                     </div>
@@ -90,7 +58,7 @@
                     <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12 box-home">
                         <div class="item-inner">
                             <h4 class="sub-title titre-box">New-York</h4>
-                            <%= image_tag("new-york.jpg", :class => "fs1")%>
+                            <%= image_tag("new-york.jpg")%>
                         </div>
                         <!--//item-inner-->
                     </div>
@@ -98,7 +66,7 @@
                     <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12 box-home">
                         <div class="item-inner">
                             <h4 class="sub-title titre-box">Los Angeles</h4>
-                            <%= image_tag("la.jpg", :class => "fs1")%>
+                            <%= image_tag("la.jpg")%>
                         </div>
                         <!--//item-inner-->
                     </div>
