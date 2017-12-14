@@ -3,13 +3,10 @@
     <p class="intro text-center" style="color: pink;">Personnalisez votre trajet avec la carte interactive</p>
     <div class="container text-center">
         <div id="filters" class="button-group clearfix boutons-menu-maps">
-            <button class="btn button" data-filter=".new" >Créer mon itinéraire</button>
-            <button class="btn button" data-filter=".mestrips">Voir mes lieux</button>
             <button class="btn button" data-filter=".musees">Enregistrer mon trajet</button>
-        <div>
-            <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-
-        </div>
+            <div>
+                
+            </div>
         </div>
         
         <!--//rech par trajet, lieux sélectionnés et enregistrer-->
@@ -23,6 +20,8 @@
             <div class="header-box">
                 <span class="fs1" aria-hidden="true" data-icon="&#xe104;"></span>
             </div>
+            <input id="surface" class="controls" type="text" placeholder="Entrez un lieu">
+                <input type="submit" onClick="surface();" />
 
             <div class="desc text-center">
                 <h4>A Paris, je souhaite visiter :</h4>
@@ -56,10 +55,10 @@
     <!--//item-->
 </div>
 
-<!--------- Suggestions --------------->
+<!--------- Suggestions -------------->
 <section id="work-list" class="section work-list title-result-page-maps">
     <div class="container text-center">
-        <h3 class="title">Résultats de lieux pour Paris</h3>
+        <h3 class="title">Résultats de lieux pour #{lieu}</h3>
         <div id="filters" class="button-group clearfix">
             <button class="btn button is-checked" data-filter="*">Tous</button>
             <button class="btn button" data-filter=".restos">Restos</button>
@@ -68,7 +67,6 @@
             <button class="btn button" data-filter=".insolites">Insolites</button>
             <button class="btn button last" data-filter=".clubs">Clubs</button>
         </div>
-        <!--//filtres-->
         
         <div id="search-result"></div>
         
