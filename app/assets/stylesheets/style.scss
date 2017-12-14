@@ -2962,86 +2962,50 @@ h1.logo {
 /********************************  Home Page  ************************************/
 
 /****** Slider  ******/
-
+.text-slider{
+  position: absolute;
+  padding-top: 15%;
+  padding-left: 25%;
+  color: #ffffff;
+  z-index:10;
+  font-size: xx-large;
+  text-align: center;
+}
 .slider-home{
-    clear: both;
+  clear: both;
+}
+.slider-images{
+  width:100%; 
+  height:600px;
 }
 
+.imgslider{
+  -webkit-filter: grayscale(50%);
+}
+.carousel-caption{
+  font-size: 30px;
+  text-decoration: bold;
+}
 
 /****** En visite à:  ******/
 
-.box-home-londres {
-    background-image: url("londres.jpg");
-    background-repeat: no-repeat;
-    filter: grayscale(0);
-    padding-right: 10px;
-    height: 165px;
+.box-home img {
+  min-width: 320px;
+  background-repeat: no-repeat;
+  filter: grayscale(0);
 }
 
-.box-home-londres:hover {
-    filter: grayscale(1);
+.box-home img:hover {
+  filter: grayscale(1);
 }
 
-.box-home-londres h3 {
-    color: white !important;
-    font-size: 30px !important;
-    padding-top: 40px;
+.box-home h4 {
+  color: pink;
+  font-size: 2em !important;
+  padding-top: 20px;
+  z-index: 10 !important;
 }
 
-.box-home-paris {
-    background-image: url("paris.jpg");
-    background-repeat: no-repeat;
-    filter: grayscale(0);
-    padding-right: 10px;
-    height: 165px;
-
-}
-
-.box-home-paris:hover {
-    filter: grayscale(1);
-}
-
-.box-home-paris h3 {
-    color: white !important;
-    font-size: 30px !important;
-    padding-top: 40px;
-}
-
-.box-home-new-york {
-    background-image: url("new-york.jpg");
-    background-repeat: no-repeat;
-    filter: grayscale(0);
-    padding-right: 10px;
-    height: 165px;
-}
-
-.box-home-new-york:hover {
-    filter: grayscale(1);
-}
-
-.box-home-new-york h3 {
-    color: white !important;
-    font-size: 30px !important;
-    padding-top: 40px;
-}
-
-.box-home-la {
-    background-image: url("la.jpg");
-    background-repeat: no-repeat;
-    filter: grayscale(0);
-    padding-left: 10px;
-    height: 165px;
-}
-
-.box-home-la:hover {
-    filter: grayscale(1);
-}
-
-.box-home-la h3 {
-    color: white !important;
-    font-size: 30px !important;
-    padding-top: 40px;
-}
 
 /****** Ils ont choisi:  ******/
 
@@ -3057,6 +3021,10 @@ h1.logo {
     color: springgreen;
     background-color: orange;
     margin-bottom: 20px;
+}
+
+#pac-input{
+    width: 300px;
 }
 
 /****** boite maps  ******/
@@ -3082,8 +3050,25 @@ h1.logo {
     background-color: greenyellow;
     height: 250px;
 }
+/****** button top  ******/
+.scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #52ba50;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
 
-
+.scrollToTop:hover{
+  background-color: #44a043;
+}
 /****** liste des résultats  ******/
 
 .title-result-page-maps {
@@ -3104,6 +3089,7 @@ h1.logo {
     height: 400px;
 }
 
+
 /*** Slider**/
 
 .textng{
@@ -3114,3 +3100,4 @@ h1.logo {
 .control-label{
     font-size: 14px;
 }
+
