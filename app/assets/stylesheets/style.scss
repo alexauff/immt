@@ -2962,40 +2962,48 @@ h1.logo {
 /********************************  Home Page  ************************************/
 
 /****** Slider  ******/
+.text-slider{
+  position: absolute;
+  padding-top: 15%;
+  padding-left: 5%;
+  color: #ffffff;
+  z-index:10;
+  font-size: xx-large;
+  text-align: center;
+}
 .slider-home{
   clear: both;
 }
 .slider-images{
-
-    width:100%; 
-    height:600px;
+  width:100%; 
+  height:600px;
 }
 
 .imgslider{
-    -webkit-filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
 }
 .carousel-caption{
-    font-size: 30px;
-    text-decoration: bold;
+  font-size: 30px;
+  text-decoration: bold;
 }
 
 /****** En visite à:  ******/
 
 .box-home img {
   min-width: 320px;
-    background-repeat: no-repeat;
-    filter: grayscale(0);
+  background-repeat: no-repeat;
+  filter: grayscale(0);
 }
 
-
-
 .box-home img:hover {
-    filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .box-home h4 {
-    color: pink !important;
-    font-size: 2em !important;
+  color: pink;
+  font-size: 2em !important;
+  padding-top: 20px;
+  z-index: 10 !important;
 }
 
 
@@ -3043,7 +3051,7 @@ h1.logo {
     height: 250px;
 }
 /****** button top  ******/
-#myBtn {
+.scrollToTop {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -3058,7 +3066,7 @@ h1.logo {
   border-radius: 10px;
 }
 
-#myBtn:hover {
+.scrollToTop:hover{
   background-color: #44a043;
 }
 /****** liste des résultats  ******/
@@ -3088,3 +3096,23 @@ h1.logo {
 
 }
 
+.control-label{
+    font-size: 14px;
+}
+
+#ctaSlider{
+    background-color: #52ba50;
+    border-color: #fff;
+}
+
+
+
+
+
+
+
+#youtubeImg{
+width: 500px;
+height: 400px;
+
+}
