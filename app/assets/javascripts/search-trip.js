@@ -6,10 +6,16 @@ var showResults;
 var scrollTo;
 var map;
 var service;
+var request;
 var appKey = 'AIzaSyBpvaZc6ZbCzujG45MRbYoUPt7Cg_vGb9E';
+var actualPlace;
+var searchRadius = '100';
+var defaultTypes = "all";
+var searchType;
+var autocomplete;
 
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: {
             lat: 48.8534,
             lng: 2.3488
@@ -20,10 +26,10 @@ function initMap() {
         document.getElementById('pac-input'));
 
     //var types = document.getElementById('type-selector');
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    //map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
     //map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
 
-    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete = new google.maps.places.Autocomplete(input);
     autocomplete.bindTo('bounds', map);
 
     var infowindow = new google.maps.InfoWindow();
@@ -40,11 +46,13 @@ function initMap() {
 
         var place = autocomplete.getPlace();
 
-        var request = {
+        request = {
             location: place.geometry.location, // on lui indique la localisation où chercher les points d'interet
-            radius: '10000', // on lui indique dans quel rayon chercher les points d'interets
-            types: ['all'] // on lui indique quel type de Places on recherche
+            radius: searchRadius, // on lui indique dans quel rayon chercher les points d'interets
+            types: [defaultTypes] // on lui indique quel type de Places on recherche
         };
+        
+        actualPlace = place.geometry.location;
 
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, showResults);
@@ -94,20 +102,20 @@ function initMap() {
     // Sets a listener on a radio button to change the filter type on Places
     // Autocomplete.
 
-    /*
-      function setupClickListener(id, types) {
-          var radioButton = document.getElementById(id);
-          radioButton.addEventListener('click', function () {
-              autocomplete.setTypes(types);
-          });
-      }
-
-      setupClickListener('changetype-all', []);
-      setupClickListener('changetype-address', ['address']);
-      setupClickListener('changetype-establishment', ['establishment']);
-      setupClickListener('changetype-geocode', ['geocode']);
+    
+//      function setupClickListener(id, types) {
+//          var radioButton = document.getElementById(id);
+//          radioButton.addEventListener('click', function () {
+//              autocomplete.setTypes(types);
+//          });
+//      }
+//
+//      setupClickListener('changetype-all', ['all']);
+//      setupClickListener('changetype-bank', ['bank']);
+//      setupClickListener('changetype-bar', ['bar']);
+//      setupClickListener('changetype-restaurant', ['restaurant']);
+//      setupClickListener('changetype-museum', ['museum']);
       
-      */
 }
 
 
@@ -116,7 +124,10 @@ function initMap() {
 // RECHERCHE DE PLACES
 // ===========================
 
+/*
 function initialize() {
+    
+    console.log('__initialize');
 
     // define lat-long
     var searchLocalisation = new google.maps.LatLng(-33.8665433, 151.1956316); // Pour l'instant, lat-long de la ville de pyrmont
@@ -130,20 +141,52 @@ function initialize() {
     // Google.places API : On défini la requette pour les places Google
     var request = {
         location: searchLocalisation, // on lui indique la localisation où chercher les points d'interet
-        radius: '500', // on lui indique dans quel rayon chercher les points d'interets
-        types: ['store'] // on lui indique quel type de Places on recherche
+        radius: searchRadius, // on lui indique dans quel rayon chercher les points d'interets
+        types: ['all'] // on lui indique quel type de Places on recherche
     };
 
-
-    // on stock la query dans une variable "service"
-    service = new google.maps.places.PlacesService(map);
-    // on appel la fonction ajax de google place, en mettant les paramettres (request) et on appel la fonction de retour (callback)
     service.nearbySearch(request, showResults);
 }
+*/
+
+// ===========================
+// FILTRES
+// ===========================
+
+//function refreshFilter(type) {
+//    
+//    $('#search-result').html('');
+//    
+//    searchType = type;
+//    
+//    autocomplete.setTypes(type);
+    
+//    requequette = {
+//        location: actualPlace, 
+//        radius: searchRadius, 
+//        types: type
+//    };
+//    setTimeout(function(){
+//        
+//        var filterService = new google.maps.places.PlacesService(map);
+//        filterService.nearbySearch(requequette, showResults);
+//        
+//    },2000)
+//}
 
 
 // Callback : retour de l'API Google.place 
 jQuery(function ($) {
+    
+    
+//    $('#filters .button').on('click', function(e){
+//        e.preventDefault();
+//        
+//        var type = $(this).attr('data-filter');
+//        
+//        refreshFilter(type)
+//    })
+    
 
     //scrollTo('#elem', 500);
 
@@ -157,6 +200,8 @@ jQuery(function ($) {
 
 
     showResults = function (results, status) {
+        
+        console.log(searchType);
 
         $('#search-result').html('');
 
@@ -169,49 +214,15 @@ jQuery(function ($) {
 
                 var placeId = place.place_id; // afficher id du lieu
                 var placeName = place.name; // afficher nom du lieu
-                
-                var placeRating = "";
-                var noteComplet;
-                if (placeRating != 'undefined') {
-                    noteComplet = + placeRating + ' / 5';
-                    
-                } else{
-                    noteComplet = ""
-                }
-                
-   
-                var monDessert = "" ;
-                var jaiManger;
+                var placeRating = place.rating; // afficher la note
+                var rateOnFive;
+                var types = place.types;
 
-                if (monDessert != 'undefined') {
-
-                    jaiManger = 'jai mangé ' + monDessert + 'au dessert !';
-
-                } else {
-
-                    jaiManger = "Je n'ai pas pris de dessert";
-
-                }
-
-                show('<p>' + jaiManger + '</p>');
-             
-                
-                
-                
                 if (typeof place.rating != 'undefined') {
-                    place.rating
+                    rateOnFive = '<p class="rate">Note : '+ place.rating + '/5 </p>'; // <== ici tu dois concaténer la note avec la note totale ("/5")
                 } else {
-                    placeRating = ".."; // afficher .. si pas de note
+                    rateOnFive = '<p class="rate no-rate">Pas de note</p>';
                 }
-
-
-
-
-
-
-
-
-
 
                 var placeOpen;
                 if (typeof place.opening_hours != 'undefined' && typeof place.opening_hours.open_now != 'undefined') {
@@ -221,7 +232,7 @@ jQuery(function ($) {
                         placeOpen = 'Actuellement fermé';
                     }
                 } else {
-                    placeOpen = 'non renseigné';
+                    placeOpen = 'Non renseigné';
                 }
 
                 var photoRef;
@@ -239,11 +250,31 @@ jQuery(function ($) {
                 } else {
                     placeCover = '/assets/place-default.jpg';
                 }
-                $('#search-result').append('<div id="' + placeId + '"class="item startup box-recherche website col-lg-3 col-md-4 col-sm-6"><div class="item-inner"><figure class="figure"><img src="' + placeCover + '" /></figure><div class="content text-left"><p>' + place.name + ' | open : ' + placeOpen + '</p><p>Note : ' + placeRating + ' / 5 </p><a href="#" id="' + placeId + '" class="add-trip"> Ajouter a mon trip</a></p></div></div></div>'); // on renseigne la liste des resultats à l'endroit indiqué
-
-                $('.add-trip').on('click', function (e) {
-                    e.preventDefault();
-                })
+                var linkText = "";
+                var linkClass = "";
+                
+                var currentIds = sessionStorage.getItem("currentIds");
+                
+                if(typeof currentIds != 'undefined'){
+                    
+                    if(currentIds.indexOf(placeId) == -1){
+                        
+                        linkText = "Ajouter à mon trip";
+                        linkClass = "";
+                        
+                    }else{
+                        
+                        linkText = "Retirer de mon trip";
+                        linkClass = "onmytrip";
+                        
+                    }
+                }else{
+                    linkText = "Ajouter à mon trip";
+                    linkClass = "";
+                }
+                
+                $('#search-result').append('<div id="' + placeId + '"class="item startup box-recherche website col-lg-3 col-md-4 col-sm-6"><div class="item-inner"><figure class="figure"><img src="' + placeCover + '" /></figure><div class="content text-left"><h3>' + placeName + '</h3><p>open : ' + placeOpen + '</p>' + rateOnFive + '<a href="#" id="' + placeId + '" class="add-trip '+linkClass+'">'+linkText+'</a></p></div></div></div>'); // on renseigne la liste des resultats à l'endroit indiqué            
+                // on renseigne la liste des resultats à l'endroit indiqué
 
                 // Autosave test 
 

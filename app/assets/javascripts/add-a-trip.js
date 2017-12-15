@@ -5,28 +5,42 @@
 jQuery(function ($) { // Il faut attendre que jQuery soit chargé pour écrire en jQuery (logique)
 
     $('body').on('click', '.add-trip', function (event) { // au clic sur un bouton "ajouter au trip"
-
+        
+        var obj = $(this);
+        
         event.preventDefault() // empecher l'event par defaut : changer de page vers le lien href
 
         var idToSave = $(this).attr('id'); // l'ID de la place sur laquelle on a cliqué sur le bouton "add to click"
-        console.log('on sauvegarde l\'id : ' + idToSave); // on verifie dans la console que c'est le bon ID, par rapport à celui sur lequel on a cliqué
 
-        // prochaines étapes : 
-
-        // 1 -- on regarde ce qui est enregistré dans le sessionStorage, et on le stock dans une variable currentsIds (ex: sessionStorage = 222--&333)
-        // 2 -- on ajoute idToSave (ex: idToSave = 666) à la chaine currentIds  (ex: sessionStorage = 222--&333--&666)
-        // 3 -- on sauvegarde le nouvel état de currentIds dans le sessionStorage
 
         if (typeof sessionStorage != 'undefined') { // si session storage est supporté par le navigateur
 
             if (sessionStorage.getItem("currentIds") == null) { // si c'est la première ID que lon stock
 
-                sessionStorage.setItem("currentIds", idToSave); // on enregistre cette ID
+                sessionStorage.setItem("currentIds", idToSave+'--&'); // on enregistre cette ID
+                obj.addClass('onmytrip').text('Retirer de mon trip');
 
             } else { // si des ids sont déjà été enregistrées en sessionStorage
-
-                var currentIds = sessionStorage.getItem("currentIds"); // on les stock dans une varaible
-                sessionStorage.setItem("currentIds", currentIds + '--&' + idToSave); // puis on ré-enregistre en séparant chaque ID par un charactère exotique (--&)
+                
+                var currentIds = sessionStorage.getItem("currentIds");
+                
+                if(currentIds.indexOf(idToSave) == -1){ // il n'est pas deja dans la liste
+                    
+                    sessionStorage.setItem("currentIds", currentIds + idToSave + '--&'); // puis on ré-enregistre en séparant chaque ID par un charactère exotique (--&)
+                    
+                    obj.addClass('onmytrip').text('Retirer de mon trip');
+                    
+                
+                    
+                }else{ // il est deja dans la liste
+                    
+                    console.log('il est dedans :)');
+                    obj.removeClass('onmytrip').text('Ajouter a mon trip');
+                    
+                    var newCurrentIds = currentIds.replace(idToSave+'--&','');
+                    sessionStorage.setItem("currentIds", newCurrentIds);
+                    
+                }
 
             }
 
@@ -37,9 +51,8 @@ jQuery(function ($) { // Il faut attendre que jQuery soit chargé pour écrire e
 
         }
 
-        console.log('sessionStorage : ' + sessionStorage.getItem("currentIds")) // on affiche ce qu'il y a dans sessionStorage
-
-
+        console.log(sessionStorage.getItem("currentIds"));
+        
     });
 });
 
