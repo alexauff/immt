@@ -1,13 +1,10 @@
-
-
-
 <!-- ******Map****** -->
 <section class="promo section">
-   
+
     <p class="intro text-center" style="color: pink;">
         Personnalisez votre trajet avec la carte interactive
     </p>
-    
+
     <!-- MAP SWITCHER -->
     <div class="container text-center">
         <div id="filters" class="button-group clearfix boutons-menu-maps">
@@ -15,7 +12,7 @@
             <button class="btn button" data-filter=".musees">Enregistrer mon trajet</button>
         </div>
     </div>
-    
+
 </section>
 
 
@@ -31,29 +28,21 @@
                 <h4>A Paris, je souhaite visiter :</h4>
                 <hr>
             </div>
-            <ul class="sub-title">
-                <li>Musée du Louvre</li>
-                <hr>
-                <li>Musée d'Orsay</li>
-                <hr>
-                <li>Food Market</li>
-                <hr>
-                <li>Botanique</li>
-                <hr>
-                <li>Le Badaboum</li>
-                <hr>
-                <button class="btn button" data-filter=".montrajet">Ajouter à mon trajet +</button>
-            </ul>
+            <div id="name-save">
+                <ul class="sub-title">
+
+                </ul>
+            </div>
         </div>
 
         <div id="map-wrapper" class="col-xl-9 col-md-9 col-12">
-            
+
             <div>
                 <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
             </div>
-            
+
             <div id="map"></div>
-        
+
         </div>
 
         <a href="/map" class="scrollToTop">Scroll To Top</a>
