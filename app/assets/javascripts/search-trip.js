@@ -255,7 +255,7 @@ jQuery(function ($) {
                 
                 var currentIds = sessionStorage.getItem("currentIds");
                 
-                if(typeof currentIds != 'undefined'){
+                if(currentIds != null){
                     
                     if(currentIds.indexOf(placeId) == -1){
                         
