@@ -1,5 +1,3 @@
-
-
 // https://developers.google.com/maps/documentation/javascript/examples/geocoding-place-id
 // Ajouter un marker sur la carte en fonction de l'ID d'une place :
 //
