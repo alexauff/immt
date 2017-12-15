@@ -1,19 +1,24 @@
+
+
+
 <!-- ******Map****** -->
 <section class="promo section">
-    <p class="intro text-center" style="color: pink;">Personnalisez votre trajet avec la carte interactive</p>
+   
+    <p class="intro text-center" style="color: pink;">
+        Personnalisez votre trajet avec la carte interactive
+    </p>
+    
+    <!-- MAP SWITCHER -->
     <div class="container text-center">
         <div id="filters" class="button-group clearfix boutons-menu-maps">
             <button class="btn button" data-filter=".mestrips">Voir mes lieux</button>
-                <div>
-                    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-                 </div>
             <button class="btn button" data-filter=".musees">Enregistrer mon trajet</button>
         </div>
-        
-        <!--//rech par trajet, lieux sélectionnés et enregistrer-->
     </div>
-    <!--//container-->
+    
 </section>
+
+
 <!-- partie carte -->
 <div class="box-carte-page-maps container item col-xl-12 col-md-12 col-12">
     <div class="item-inner">
@@ -21,8 +26,6 @@
             <div class="header-box">
                 <span class="fs1" aria-hidden="true" data-icon="&#xe104;"></span>
             </div>
-            <input id="surface" class="controls" type="text" placeholder="Entrez un lieu">
-                <input type="submit" onClick="surface();" />
 
             <div class="desc text-center">
                 <h4>A Paris, je souhaite visiter :</h4>
@@ -42,15 +45,24 @@
                 <button class="btn button" data-filter=".montrajet">Ajouter à mon trajet +</button>
             </ul>
         </div>
-        <div id="map"class="col-xl-9 col-md-9 col-12">
+
+        <div id="map-wrapper" class="col-xl-9 col-md-9 col-12">
+            
+            <div>
+                <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+            </div>
+            
+            <div id="map"></div>
+        
         </div>
-        <!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
+
         <a href="/map" class="scrollToTop">Scroll To Top</a>
+
 
         <div id="result">
 
         </div>
-        
+
         <!--//item-inner-->
     </div>
     <!--//item-->
@@ -61,16 +73,15 @@
     <div class="container text-center">
         <h3 class="title">Résultats de lieux pour #{lieu}</h3>
         <div id="filters" class="button-group clearfix">
-            <button class="btn button is-checked" data-filter="*">Tous</button>
-            <button class="btn button" data-filter=".restos">Restos</button>
-            <button class="btn button" data-filter=".monuments">Monuments</button>
-            <button class="btn button" data-filter=".musees">Musées</button>
-            <button class="btn button" data-filter=".insolites">Insolites</button>
-            <button class="btn button last" data-filter=".clubs">Clubs</button>
+            <button class="btn button is-checked" id="changetype-all">Tous</button>
+            <button class="btn button" id="changetype-restaurant">Restos</button>
+            <button class="btn button" id="changetype-bar">Bars</button>
+            <button class="btn button" id="changetype-museum">Musées</button>
+            <button class="btn button" id="changetype-bank">Banque</button>
         </div>
-        
+
         <div id="search-result"></div>
-        
+
     </div>
     <!--//container-fluid-->
 </section>

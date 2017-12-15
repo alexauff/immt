@@ -3060,6 +3060,16 @@ li .dropdown-item {
     height: 400px;
 }
 
+#search-result{
+    .add-trip{
+        color: green;
+        
+        &.onmytrip{
+            color: red;
+        }
+    }
+}
+
 .liste-page-maps {
     background-color: pink;
 }
