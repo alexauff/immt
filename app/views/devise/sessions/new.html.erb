@@ -1,27 +1,59 @@
-<h2>Se connecter</h2>
+ <div class="wrapper-page animated fadeInDown">
+    <div class="panel panel-color panel-primary">
+        <div class="panel-heading"> 
+           <h3 class="text-center m-t-10"> Se connecter à <a href="/" style="color:white;"><strong>IMMT</strong></a> </h3>
+        </div>
+        
+        <div class='form-horizontal m-t-40'>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+            <div class="form-group ">
+                <div class="col-xs-12">
+                    <%= f.email_field :email, autofocus:true, class: 'form-control', placeholder: 'Email', type: 'text' %>
+                </div>
+            </div>
+
+            <div class="form-group ">    
+                <div class="col-xs-12">
+                    <%= f.password_field :password, class: 'form-control', placeholder: 'Mot de passe', type: 'password' %>
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <div class="col-xs-12 checkbox">
+                    <% if devise_mapping.rememberable? %>
+                      <%= f.label :remember_me do %>
+                        <%= f.check_box :remember_me %>
+                        <%= t('.remember_me', default: 'Garder ma session ouverte') %>
+                      <% end %>
+                    <% end %>
+                </div>
+            </div>
+            
+            <div class="form-group text-right">
+                <div class="col-xs-12">
+                    <!-- <button class="btn btn-purple w-md" type="submit">Log In</button> -->
+                    <%= f.submit  t('.sign_in', default: 'Se connecter'), class: 'btn btn-purple w-md' %>
+                </div>
+            </div>
+
+            <div class="form-group m-t-30">
+                <div class="col-sm-7">
+                    <i class="fa fa-lock m-r-5"></i>
+                    <% if devise_mapping.recoverable? && controller_name != 'passwords' %>
+                      <%= link_to t('.forgot_your_password', default: 'Mot de passe oublié?'), new_password_path(resource_name) %><br />
+                    <% end %>
+                </div>
+
+                <div class="col-sm-5 text-right">
+                    <!-- <a href="register.html">Create an account</a> -->
+                    <% if devise_mapping.registerable? && controller_name != 'registrations' %>
+                      <%= link_to t('.sign_up', default: 'Créer un compte'), new_registration_path(resource_name) %><br />
+                    <% end %>
+                </div>
+            </div>
+
+          <% end %>
+        </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Se connecter" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
