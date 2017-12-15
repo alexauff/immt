@@ -26,20 +26,12 @@
 
 <%= render '/layouts/footer' %> <!-- sert à appeler le footer qui figurera sur toutes les pages du site-->
   
-  
-   <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' %>
+<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' %>
+<%= javascript_include_tag 'search-trip', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' %>
+<%= javascript_include_tag 'add-a-trip', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'add-marker', 'data-turbolinks-track': 'reload' %>
 
-  <%= javascript_include_tag 'search-trip', 'data-turbolinks-track': 'reload' %>
-  
-  <%= javascript_include_tag 'button-top-map', 'data-turbolinks-track': 'reload' %>
-
-  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' %>
-  
-  <%= javascript_include_tag 'add-a-trip', 'data-turbolinks-track': 'reload' %>
-  
-  <%= javascript_include_tag 'add-marker', 'data-turbolinks-track': 'reload' %>
-  
-  <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBpvaZc6ZbCzujG45MRbYoUPt7Cg_vGb9E&amp;libraries=places&amp;callback=initMap' %>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpvaZc6ZbCzujG45MRbYoUPt7Cg_vGb9E&amp;libraries=places&amp;callback=initMap" async="" defer=""></script>
 </body>
 </html>
