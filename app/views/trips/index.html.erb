@@ -5,7 +5,7 @@
 
 	<div class="container text-center">
 		<div class="intro text-center titre">
-		<span>Les trips de</span>
+		<p>Les trips de </p>
 	</div>
 	<div class="desc text-center">
 		<h1>J'ai sauvegardé ces destinations </h1>
@@ -46,5 +46,7 @@
     </div>
     <!--//box-carte-liste-->
     
-    
+     
+<button class="btn button"><%= link_to "Modifier ce trip", method: :patch %></button>
+   <button class="btn button"><%= link_to "Supprimer ce trip", method: :get %></button>
 </div>
