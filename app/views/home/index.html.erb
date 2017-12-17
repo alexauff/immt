@@ -3,7 +3,8 @@
 <div class="contain_slide slider-home">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
-        <div class= "text-slider"><h1>Avec I Make My Trip je crée mes propres itinéraires au gré de mes destinations ! </h1>       
+        <div class= "text-slider">
+            <h1>Avec <strong class="test-color">I Make My Trip </strong>je crée <strong>facilement</strong> et <strong>rapidement</strong> mes propres itinéraires au gré de mes destinations ! </h1>       
 
             <a href="#" class="btn btn-primary " id="ctaSlider" href="/users/sign_up" >Créer mon itinéraire</a> 
         </div>
@@ -37,11 +38,13 @@
 <br>
 
 <!-- partie vidéo démo -->
-<section id="who" class="who section">
+<section id="who" class="who section col-xl-12 col-md-12 col-12">
     <div class="container text-center">
         <h2 class="title text-center">Comment ça marche ?</h2>
         <p class="intro text-center">Visionnez notre démo en cliquant ci-dessous !</p>
-        <%= image_tag("yt.png") %>
+        <div class="video-demo">
+            <%= image_tag("yt.jpg") %>
+        </div>
     </div>
 </section>
 <!-- fin vidéo démo -->
