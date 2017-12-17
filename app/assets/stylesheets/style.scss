@@ -3033,17 +3033,15 @@ h1.logo {
 
 .boutons-menu-maps button {
     color: springgreen;
-    background-color: orange;
     margin-bottom: 20px;
 }
 
 #pac-input{
-    width: 300px;
+    width: 100%;
 }
 
 /****** boite maps  ******/
 .box-carte-page-maps {
-    background-color: skyblue;
     padding-bottom: 20px;
 
 }
@@ -3058,6 +3056,7 @@ li .dropdown-item {
 
 .box-carte-page-maps #map {
     height: 400px;
+
 }
 
 #search-result{
@@ -3071,11 +3070,11 @@ li .dropdown-item {
 }
 
 .liste-page-maps {
-    background-color: pink;
+        background-color: lightgreen;
+    height: 428px;
 }
 
 .carte-page-maps {
-    background-color: greenyellow;
     height: 250px;
 }
 /****** button top  ******/
@@ -3099,12 +3098,10 @@ li .dropdown-item {
 }
 /****** liste des résultats  ******/
 
-.title-result-page-maps {
-    background-color: aqua;
-}
+
 
 .villes-page-trips {
-    background-color: paleturquoise;
+    height: 20px;
 }
 
 .box-recherche img {
@@ -3114,9 +3111,7 @@ li .dropdown-item {
 }
 
 .box-recherche {
-    height: 400px;
 }
-
 
 
 
