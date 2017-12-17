@@ -2724,11 +2724,21 @@ h1.logo {
     }
     .header {
         padding: 0px inherit;
+        height: 140px;
     }
     .header h1.logo {
         font-size: 20px;
         line-height: 2.4;
         float: none;
+    }
+    .size-logo img {
+        height: 60px;
+    }
+    .header{
+        height: 100px !important;
+    }
+    .text-slider {
+        height: 150px !important;
     }
     .navbar-collapse {
         border-top: none;
@@ -2789,7 +2799,7 @@ h1.logo {
         padding-top: 100px;
     }
     .header-wrapper-home {
-        min-height: 460px;
+        nin-height: 460px;
     }
     .promo .title .middle {
         font-size: 38px;
@@ -2880,7 +2890,7 @@ h1.logo {
 /* Small devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-    .config-wrapper {
+     .config-wrapper {
         display: none;
     }
     .header .main-nav .nav .nav-item {
@@ -2895,6 +2905,12 @@ h1.logo {
     .navbar-expand-md .navbar-nav .nav-link {
         padding-left: 15px;
         padding-right: 15px;
+    }
+        .size-logo img {
+        height: 60px;
+    }
+    .header{
+        height: 100px !important;
     }
 }
 
@@ -2939,6 +2955,12 @@ h1.logo {
     .latest-work .item .figure-container a {
         min-height: 440px;
     }
+    .size-logo img {
+        height: 80px;
+    }
+    .header{
+        height: 90px !important;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -2957,38 +2979,39 @@ h1.logo {
 
 /*********************  Header / Popin  ******************/
 
-
-
 /********************************  Home Page  ************************************/
 
 /****** Slider  ******/
-.text-slider{
-  position: absolute;
-  padding-top: 15%;
-  color: #ffffff;
-  z-index:10;
-  font-size: xx-large;
-  text-align: center;
+
+.text-slider {
+    position: absolute;
+    padding-top: 15%;
+    color: #ffffff;
+    z-index: 10;
+    font-size: xx-large;
+    text-align: center;
 }
-.slider-home{
-  clear: both;
+
+.slider-home {
+    clear: both;
 }
-.slider-images{
-  width:100%; 
-  height:600px;
+
+.slider-images {
+    width: 100%;
+    height: 600px;
 }
 
 
-.carousel-caption{
-  font-size: 30px;
-  text-decoration: bold;
+.carousel-caption {
+    font-size: 30px;
+    text-decoration: bold;
 }
 
-.control-label{
+.control-label {
     font-size: 14px;
 }
 
-#ctaSlider{
+#ctaSlider {
     background-color: #52ba50;
     border-color: #fff;
 }
@@ -2996,29 +3019,30 @@ h1.logo {
 /****** En visite à:  ******/
 
 .box-home img {
-  min-width: 320px;
-  background-repeat: no-repeat;
-  filter: grayscale(0);
+    min-width: 320px;
+    background-repeat: no-repeat;
+    filter: grayscale(0);
 }
 
 .box-home img:hover {
-  filter: grayscale(1);
+    filter: grayscale(1);
 }
 
 .box-home h4 {
-  color: pink;
-  font-size: 2em !important;
-  padding-top: 20px;
-  z-index: 10 !important;
+    color: pink;
+    font-size: 2em !important;
+    padding-top: 20px;
+    z-index: 10 !important;
 }
 
-
-/****** Ils ont choisi:  ******/
 
 .images-box {
     height: 300px;
 }
 
+.video-demo img {
+    width: 90%;
+}
 
 
 /********************************  Page Maps  ************************************/
@@ -3028,11 +3052,12 @@ h1.logo {
     margin-bottom: 20px;
 }
 
-#pac-input{
+#pac-input {
     width: 100%;
 }
 
 /****** boite maps  ******/
+
 .box-carte-page-maps {
     padding-bottom: 20px;
 
@@ -3051,11 +3076,11 @@ li .dropdown-item {
 
 }
 
-#search-result{
-    .add-trip{
+#search-result {
+    .add-trip {
         color: green;
-        
-        &.onmytrip{
+
+        &.onmytrip {
             color: red;
         }
     }
@@ -3069,25 +3094,29 @@ li .dropdown-item {
 .carte-page-maps {
     height: 250px;
 }
+
 /****** button top  ******/
+
 .scrollToTop {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #52ba50;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 10px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #52ba50;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-.scrollToTop:hover{
-  background-color: #44a043;
+
+.scrollToTop:hover {
+    background-color: #44a043;
 }
+
 /****** liste des résultats  ******/
 
 .villes-page-trips {
@@ -3096,13 +3125,10 @@ li .dropdown-item {
 
 .box-recherche img {
     height: 200px;
-    
-    max-width: 100%;
-}
 
-.box-recherche {
+    max-width: 100%;
 }
 
 /********************************  Page Mes Trips  ************************************/
 
-
+.test-color{color: #43BA5E;}
