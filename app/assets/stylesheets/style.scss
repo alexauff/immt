@@ -2965,7 +2965,7 @@ h1.logo {
 .text-slider{
   position: absolute;
   padding-top: 15%;
-  margin-left: 200px;
+  margin-left: 140px;
   color: #ffffff;
   z-index:10;
   font-size: xx-large;
@@ -2979,17 +2979,10 @@ h1.logo {
   height:600px;
 }
 
-.imgslider{
-  -webkit-filter: grayscale(50%);
-}
+
 .carousel-caption{
   font-size: 30px;
   text-decoration: bold;
-}
-
-.textng{
-    backdrop-filter: grayscale(1) contrast(3);
-
 }
 
 .control-label{
