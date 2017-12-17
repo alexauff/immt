@@ -273,7 +273,7 @@ jQuery(function ($) {
                     linkClass = "";
                 }
                 
-                $('#search-result').append('<div id="' + placeId + '"class="item startup box-recherche website col-lg-3 col-md-4 col-sm-6"><div class="item-inner"><figure class="figure"><img src="' + placeCover + '" /></figure><div class="content text-left"><h3>' + placeName + '</h3><p>open : ' + placeOpen + '</p>' + rateOnFive + '<a href="#" id="' + placeId + '" class="add-trip '+ linkClass +'">'+linkText+'</a></p></div></div></div>'); // on renseigne la liste des resultats à l'endroit indiqué            
+                $('#search-result').append('<div id="' + placeId + '"class="item startup box-recherche website col-lg-3 col-md-4 col-sm-6"><div class="item-inner"><figure class="figure"><img src="' + placeCover + '" /></figure><div class="content text-left"><h3>' + placeName + '</h3><p>open : ' + placeOpen + '</p>' + rateOnFive + '<a href="#" id="' + placeId + '" class="add-trip '+linkClass+'">'+linkText+'</a></p></div></div></div>'); // on renseigne la liste des resultats à l'endroit indiqué            
                 // on renseigne la liste des resultats à l'endroit indiqué
 
                 // Autosave test 
@@ -282,7 +282,7 @@ jQuery(function ($) {
 
                 // var placeId_json = JSON.stringify(placeId);
                 // sessionStorage.setItem("autosave", placeId_json);
-                
+
             }
         } else {
             alert('aucun resultat');
