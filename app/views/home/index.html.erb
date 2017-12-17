@@ -5,8 +5,11 @@
         <!-- Indicators -->
         <div class= "text-slider">
             <h1>Avec <strong class="test-color">I Make My Trip </strong>je crée <strong>facilement</strong> et <strong>rapidement</strong> mes propres itinéraires au gré de mes destinations ! </h1>       
-
-            <a href="#" class="btn btn-primary " id="ctaSlider" href="/users/sign_up" >Créer mon itinéraire</a> 
+            <% if user_signed_in? %>
+            <a class="btn btn-primary " id="ctaSlider" href="/trips" >Créer mon itinéraire</a>
+            <% else %> 
+            <a class="btn btn-primary " id="ctaSlider" href="/users/sign_in" >Créer mon itinéraire</a>
+            <% end %>
         </div>
 
         <ul class="carousel-indicators">

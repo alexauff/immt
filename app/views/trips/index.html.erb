@@ -4,49 +4,52 @@
 
 <div class="container">
 
-    <div class="container text-center">
-        <div class="intro text-center titre">
-        <p>Les trips de <%= current_user.name %></p>
+  <div class="container text-center">
+    <div class="intro text-center titre">
+      <p>Les trips de <%= current_user.name %></p>
     </div>
     <div class="desc text-center">
-        <h1>J'ai sauvegardé ces destinations </h1>
+      <h1>J'ai sauvegardé ces destinations </h1>
     </div>
 
-   <!-- ******Liste destinations****** -->
-   <div class="box-carte-liste-page-maps item col-xl-12 col-md-12 col-12">
-<p><button class="btn btn-primary col-xl-12 col-md-12 col-12 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-   NY</button></p>
-       <!-- partie carte -->
-       <div class="box-carte-page-maps container item col-xl-12 col-md-12 col-12 collapse row "  id="collapseExample">
-           <div class="item-inner">
-               <div class="liste-page-maps col-xl-3 col-md-3 col-12">
+    <!-- ******Liste destinations****** -->
+    <div class="box-carte-liste-page-maps item col-xl-12 col-md-12 col-12">
+      <p><button class="btn btn-primary col-xl-12 col-md-12 col-12 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      NY</button></p>
+      <!-- partie carte -->
+      <div class="box-carte-page-maps container item col-xl-12 col-md-12 col-12 collapse row "  id="collapseExample">
+       <div class="item-inner">
+         <div class="liste-page-maps col-xl-3 col-md-3 col-12">
 
-                   <div class="desc text-center">
-                       <h5>A New-York, je souhaite visiter :</h5>
-                   </div>
-                   
-                   <div id="name-save">
-                       <ul class="sub-title">
-
-                       </ul>
-                   </div>
-               </div>
-
-               <div id="map-wrapper" class="col-xl-9 col-md-9 col-12">
-                   <div id="map">
-
-                   </div>
-               </div>
-
-
-               <!--//item-inner-->
+           <div class="desc text-center">
+             <h5>A New-York, je souhaite visiter :</h5>
            </div>
-           <!--//item-->
+
+           <div id="name-save">
+             <ul class="sub-title">
+
+             </ul>
+           </div>
+         </div>
+
+         <div id="map-wrapper" class="col-xl-9 col-md-9 col-12">
+           <div id="map">
+
+           </div>
+         </div>
+
+
+         <!--//item-inner-->
        </div>
-       <!--//item-inner-->
+       <!--//item-->
+     </div>
+     <!--//item-inner-->
    </div>
    <!--//box-carte-liste-->
    <button class="btn button"><%= link_to "Modifier ce trip", method: :patch %></button>
-    <button class="btn button"><%= link_to "Supprimer ce trip", method: :get %></button>   
+   <button class="btn button"><%= link_to "Supprimer ce trip", method: :get %></button>   
+ </div>
+
+ <a class="btn btn-primary " id="ctaMestrips" href="/map">Créer un nouveau trip</a>
 </div>
 
