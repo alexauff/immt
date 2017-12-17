@@ -8,8 +8,8 @@
     <!-- MAP SWITCHER -->
     <div class="container text-center">
         <div id="filters" class="button-group clearfix boutons-menu-maps">
-            <button class="btn button" data-filter=".mestrips">Voir mes lieux</button>
-            <button class="btn button" data-filter=".musees">Enregistrer mon trajet</button>
+            <button class="btn button" data-filter=".mestrips"><%= link_to "Voir mes lieux",new_user_session_path, method: :post %></button>
+            <button class="btn button" data-filter=".montrip"><%= link_to "Enregistrer mon trajet",new_user_session_path, method: :post %></button>
         </div>
     </div>
 
