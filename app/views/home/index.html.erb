@@ -3,14 +3,20 @@
 <div class="contain_slide slider-home">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
-        <div class= "text-slider"><h1>Je créé mon itinéraire de voyage gratuitement et rapidement</h1>       
-            <a href="/users/sign_up" class="btn btn-primary " id="ctaSlider">Créer mon itinéraire</a> 
+        <div class= "text-slider">
+            <h1>Avec <strong class="test-color">I Make My Trip </strong>je crée <strong>facilement</strong> et <strong>rapidement</strong> mes propres itinéraires au gré de mes destinations ! </h1>       
+            <% if user_signed_in? %>
+            <a class="btn btn-primary " id="ctaSlider" href="/trips" >Créer mon itinéraire</a>
+            <% else %> 
+            <a class="btn btn-primary " id="ctaSlider" href="/users/sign_in" >Créer mon itinéraire</a>
+            <% end %>
         </div>
 
         <ul class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
         </ul>
 
         <!-- Wrapper for slides -->
@@ -18,7 +24,7 @@
 
 
             <div class="item slider-images">
-                <%= image_tag("slide1.jpg") %>
+                <%= image_tag("slide4.jpg") %>
             </div>
 
             <div class="item slider-images">
@@ -26,6 +32,9 @@
             </div>
 
             <div class="item active slider-images">
+                <%= image_tag("slide1.jpg") %>
+            </div>
+            <div class="item slider-images">
                 <%= image_tag("slide3.jpg") %>
             </div>
         </div>
@@ -36,11 +45,13 @@
 <br>
 
 <!-- partie vidéo démo -->
-<section id="who" class="who section">
+<section id="who" class="who section col-xl-12 col-md-12 col-12">
     <div class="container text-center">
         <h2 class="title text-center">Comment ça marche ?</h2>
         <p class="intro text-center">Visionnez notre démo en cliquant ci-dessous !</p>
-        <%= image_tag("yt.png") %>
+        <div class="video-demo">
+            <%= image_tag("yt.jpg") %>
+        </div>
     </div>
 </section>
 <!-- fin vidéo démo -->
@@ -103,7 +114,7 @@
                         </a>
                     </figure>
                     <div class="content-wrapper text-center">
-                        <h3 class="sub-title"><a href="blog-post.html">Les choses à faire en Thaïlande</a></h3>
+                        <h3 class="sub-title"><a href="/map">Les choses à faire en Thaïlande</a></h3>
                         <div class="desc">
                             <p>Marie et Léa sont parties en Thaïlande. Elles ont visité Bangkok, Chiang Mai et Phuket et nous recommandent vivement plusieurs activités à faire.</p>
                         </div>
@@ -123,7 +134,7 @@
                         </a>
                     </figure>
                     <div class="content-wrapper text-center">
-                        <h3 class="sub-title"><a href="blog-post.html">A la conquête des aurores boréales</a></h3>
+                        <h3 class="sub-title"><a href="/map">A la conquête des aurores boréales</a></h3>
                         <div class="desc">
                             <p>Léo a entrepris une chasse des aurores boréales en solitaire. Pour cela il a parcouru la Norvège, l'Islande, la Suède puis la Finlande. Un spectacle magique qui lui a permis de découvrir de nouveaux pays.</p>
                         </div>
@@ -143,7 +154,7 @@
                         </a>
                     </figure>
                     <div class="content-wrapper text-center">
-                        <h3 class="sub-title"><a href="blog-post.html">Un séjour à Cancùn</a></h3>
+                        <h3 class="sub-title"><a href="/map">Un séjour à Cancùn</a></h3>
                         <div class="desc">
                             <p>On cherche toujours un endroit paradisiaque pour poser ses valises. Et pourquoi pas a Cancùn? Une ville Mexicaine qui vous fera rêver avec ses plages des Caraïbes.</p>
                         </div>
@@ -162,7 +173,7 @@
                         </a>
                     </figure>
                     <div class="content-wrapper text-center">
-                        <h3 class="sub-title"><a href="blog-post.html">Noël au Québec</a></h3>
+                        <h3 class="sub-title"><a href="/map">Noël au Québec</a></h3>
                         <div class="desc">
                             <p>Chloé et Mathieu l'on fait! Un séjour en amoureux inoubliable pour une fin d'année enneigée. Découvrez vous aussi l'accueil chaleureux des Québequois. </p>
                         </div>
