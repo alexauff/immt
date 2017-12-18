@@ -3048,8 +3048,14 @@ h1.logo {
 /********************************  Page Maps  ************************************/
 
 .boutons-menu-maps button {
-    color: springgreen;
+    background-color: #52ba50;
     margin-bottom: 20px;
+}
+.boutons-menu-maps a{
+    color: #ffffff;
+}
+.intro{
+    color: #52ba50;
 }
 
 #pac-input {
@@ -3060,7 +3066,6 @@ h1.logo {
 
 .box-carte-page-maps {
     padding-bottom: 20px;
-
 }
 
 li .dropdown-item {
@@ -3073,7 +3078,6 @@ li .dropdown-item {
 
 .box-carte-page-maps #map {
     height: 400px;
-
 }
 
 #search-result {
@@ -3087,12 +3091,26 @@ li .dropdown-item {
 }
 
 .liste-page-maps {
-    background-color: lightgreen;
+    background-color: #eeeeee;
     height: 428px;
 }
+.desc h4{
+    font-size: 20px;
+    font-family: 'Merriweather Sans', 'Open Sans', 'arial', 'sans-serif';
+    font-weight: 800;
+    color: #505c70;
+}
+.sub-title li{
+    font-size: 17px;
+    font-family: 'Merriweatherlight';
+    color: #999999;
+}   
 
 .carte-page-maps {
     height: 250px;
+}
+.content{
+    height: 300px;
 }
 
 /****** button top  ******/
