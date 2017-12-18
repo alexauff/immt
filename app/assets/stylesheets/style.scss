@@ -3153,6 +3153,14 @@ li .dropdown-item {
 }
 
 /********************************  Page Mes Trips  ************************************/
+.box-carte-mes-trips{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-primary a{
+    color: #fafafa !important;
+}
 
 .btn-primary{
     color: #ffffff;
@@ -3167,7 +3175,7 @@ li .dropdown-item {
 }
 
 .btn-primary:active{
-    color: #ffffff;
+    color: #ffffff ;
     background-color: #52ab50;
     border: none;
 }
@@ -3189,7 +3197,9 @@ li .dropdown-item {
 
 
 
-.test-color{color: #43BA5E;}
+.test-color{
+    color: #43BA5E;
+}
 
 #ctaMestrips{
     position: center;
@@ -3204,4 +3214,8 @@ li .dropdown-item {
 
 .intro{
     color: dimgrey;
+}
+
+.btn-page-trips{
+    margin-bottom: 30px;
 }

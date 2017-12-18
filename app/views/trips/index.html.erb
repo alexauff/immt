@@ -5,7 +5,7 @@
 
   <div class="container text-center">
     <div class="intro text-center titre">
-      <p>Les trips de <%= current_user.name %></p>
+      <h2>Les trips de <%= current_user.name %></h2>
     </div>
     <div class="desc text-center">
       <h1>J'ai sauvegardé ces destinations </h1>
@@ -14,21 +14,22 @@
     <!-- ******Liste destinations****** -->
     <div class="box-carte-liste-page-maps item col-xl-12 col-md-12 col-12">
       <p><button class="btn btn-primary col-xl-12 col-md-12 col-12 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      NY</button></p>
+      Paris</button></p>
       <!-- partie carte -->
-      <div class="box-carte-page-maps container item col-xl-12 col-md-12 col-12 collapse row "  id="collapseExample">
+      <div class="box-carte-page-maps container item col-xl-12 col-md-12 col-12">
        <div class="item-inner">
          <div class="liste-page-maps col-xl-3 col-md-3 col-12">
 
            <div class="desc text-center">
-             <h5>A <strong style="color: #52ab50">New-York</strong>, je souhaite visiter :</h5>
+             <h5>A <strong style="color: #52ab50">Mont Saint-Michel</strong>, je souhaite aller :</h5>
+           </div>
+           <div class="sub-title sub-title-left">
+           <p>La Vieille Auberge</p>
+           <p>Eglise Saint-Pierre</p>
+           <p>Soluca</p>
+           <p>Restaurant Le Chapeau Rouge</p>
            </div>
 
-           <div id="name-save">
-             <ul class="sub-title">
-
-             </ul>
-           </div>
          </div>
 
          <div id="map-wrapper" class="col-xl-9 col-md-9 col-12">
@@ -45,9 +46,68 @@
      <!--//item-inner-->
    </div>
    <!--//box-carte-liste-->
-   <button class="btn button"><%= link_to "Modifier ce trip", method: :patch %></button>
-   <button class="btn button"><%= link_to "Supprimer ce trip", method: :get %></button>   
+   
+    <!-- ******Liste destinations****** -->
+    <div class="box-carte-liste-page-maps box-carte-mes-trips item col-xl-12 col-md-12 col-12">
+      <p><button class="btn btn-primary col-xl-12 col-md-12 col-12 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      New-York</button></p>
+      <!-- partie carte -->
+      <div class="box-carte-page-maps container item col-xl-12 col-md-12 col-12 collapse row "  id="collapseExample">
+       <div class="item-inner">
+         <div class="liste-page-maps col-xl-3 col-md-3 col-12">
+
+           <div class="desc text-center">
+             <h5>A <strong style="color: #52ab50">New-York</strong>, je souhaite visiter :</h5>
+           </div>
+
+         </div>
+
+         <div id="map-wrapper" class="col-xl-9 col-md-9 col-12">
+           <div id="map">
+
+           </div>
+         </div>
+
+
+         <!--//item-inner-->
+       </div>
+       <!--//item-->
+     </div>
+     <!--//item-inner-->
+   </div>
+   <!--//box-carte-liste-->
+   
+    <!-- ******Liste destinations****** -->
+    <div class="box-carte-liste-page-maps box-carte-mes-trips item col-xl-12 col-md-12 col-12">
+      <p><button class="btn btn-primary col-xl-12 col-md-12 col-12 " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Londres</button></p>
+      <!-- partie carte -->
+      <div class="box-carte-page-maps container item col-xl-12 col-md-12 col-12 collapse row "  id="collapseExample">
+       <div class="item-inner">
+         <div class="liste-page-maps col-xl-3 col-md-3 col-12">
+
+           <div class="desc text-center">
+             <h5>A <strong style="color: #52ab50">New-York</strong>, je souhaite visiter :</h5>
+           </div>
+
+         </div>
+
+         <div id="map-wrapper" class="col-xl-9 col-md-9 col-12">
+           <div id="map">
+
+           </div>
+         </div>
+
+
+         <!--//item-inner-->
+       </div>
+       <!--//item-->
+     </div>
+     <!--//item-inner-->
+   </div>
+   <!--//box-carte-liste-->
+   <button class="btn button btn-primary btn-page-trips"><%= link_to "Modifier ce trip", method: :patch %></button>
+   <button class="btn button btn-primary btn-page-trips"><%= link_to "Supprimer ce trip", method: :get %></button>   
  </div>
 
- <a class="btn btn-primary " id="ctaMestrips" href="/map">Créer un nouveau trip</a>
 

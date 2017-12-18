@@ -205,7 +205,7 @@ jQuery(function ($) {
     showResults = function (results, status) {
       
         $('#search-result').html('');
-      	$('.liste-page-maps .title-search').text('A '+ currentPlaceSearch + ', je souhaite visiter :');
+      	$('.liste-page-maps .title-search').text('A '+ currentPlaceSearch + ', je souhaite aller :');
         $('.title-result-page-maps .title').text('Résultats de lieux pour '+ currentPlaceSearch);
         
 
