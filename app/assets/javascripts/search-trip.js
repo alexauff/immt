@@ -2,6 +2,7 @@
 // AUTOCOMPLETE
 // ===========================
 
+var currentPlaceSearch;
 var showResults;
 var scrollTo;
 var map;
@@ -96,6 +97,8 @@ function initMap() {
 
         infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address + '</div>'); // je sais pas si j'ai bien fermé la div
         infowindow.open(map, marker);
+      
+      	currentPlaceSearch = place.name;
 
     });
 
@@ -200,10 +203,9 @@ jQuery(function ($) {
 
 
     showResults = function (results, status) {
-        
-        console.log(searchType);
-
+      
         $('#search-result').html('');
+      	$('.title-result-page-maps .title').text('Résultats de lieux pour '+ currentPlaceSearch);
 
         // Si on a une reponse du serveur
         if (status == google.maps.places.PlacesServiceStatus.OK) {

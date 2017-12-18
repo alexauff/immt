@@ -26,7 +26,7 @@ $('body').on('click', '.add-trip', function (event) { // au clic sur un bouton "
 
                 obj.addClass('onmytrip').text('Retirer de mon trip');
 
-                $('.liste-page-maps .sub-title').append( '<li>'+ placeNameAdded +'</li>' );
+                $('.liste-page-maps .sub-title').append( '<li>'+ placeNameAdded + '</li>' );
             } else { // il est deja dans la liste
 
                 console.log('il est dedans :)');
