@@ -16,9 +16,6 @@
 //= require bootstrap-sprockets
 
 
-// Javascrip : search-trip.js
-
-
 
 
 

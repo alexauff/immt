@@ -12,3 +12,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+Rails.application.config.assets.precompile += %w( search-trip.js )
+Rails.application.config.assets.precompile += %w( button-top-map.js )
+Rails.application.config.assets.precompile += %w( add-a-trip.js )
+Rails.application.config.assets.precompile += %w( add-marker.js )
