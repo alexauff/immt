@@ -6,7 +6,7 @@
         <div class= "text-slider">
             <h1>Avec <strong class="test-color">I Make My Trip </strong>je crée <strong>facilement</strong> et <strong>rapidement</strong> mes propres itinéraires au gré de mes destinations ! </h1>       
             <% if user_signed_in? %>
-            <a class="btn btn-primary " id="ctaSlider" href="/trips" >Créer mon itinéraire</a>
+            <a class="btn btn-primary " id="ctaSlider" href="/map" >Créer mon itinéraire</a>
             <% else %> 
             <a class="btn btn-primary " id="ctaSlider" href="/users/sign_in" >Créer mon itinéraire</a>
             <% end %>
@@ -24,15 +24,15 @@
 
 
             <div class="item slider-images">
-                <%= image_tag("slide4.jpg") %>
+                <%= image_tag("slide1.jpg") %>
             </div>
 
             <div class="item slider-images">
-                <%= image_tag("slide2.jpg") %>
+                <%= image_tag("slide4.jpg") %>
             </div>
 
             <div class="item active slider-images">
-                <%= image_tag("slide1.jpg") %>
+                <%= image_tag("slide2.jpg") %>
             </div>
             <div class="item slider-images">
                 <%= image_tag("slide3.jpg") %>
