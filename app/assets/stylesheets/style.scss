@@ -3155,6 +3155,41 @@ li .dropdown-item {
 
 /********************************  Page Mes Trips  ************************************/
 
+.btn-primary{
+    color: #ffffff;
+    background-color: #65758e;
+    border: none;
+}
+
+.btn-primary:hover{
+    color: #ffffff;
+    background-color: #52ab50;
+    border: none;
+}
+
+.btn-primary:active{
+    color: #ffffff;
+    background-color: #52ab50;
+    border: none;
+}
+
+.desc h5{
+    font-size: 20px;
+    font-family: 'Merriweather Sans', 'Open Sans', 'arial', 'sans-serif';
+    font-weight: 800;
+    color: #505c70;
+}
+.desc h1{
+    font-size: 28px;
+    font-family: 'Open Sans', 'arial', 'sans-serif';
+    font-weight: 800;
+    color: #505c70;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+
 .test-color{color: #43BA5E;}
 
 #ctaMestrips{
