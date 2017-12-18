@@ -6,7 +6,7 @@
         <div class= "text-slider">
             <h1>Avec <strong class="test-color">I Make My Trip </strong>je crée <strong>facilement</strong> et <strong>rapidement</strong> mes propres itinéraires au gré de mes destinations ! </h1>       
             <% if user_signed_in? %>
-            <a class="btn btn-primary " id="ctaSlider" href="/trips" >Créer mon itinéraire</a>
+            <a class="btn btn-primary " id="ctaSlider" href="/map" >Créer mon itinéraire</a>
             <% else %> 
             <a class="btn btn-primary " id="ctaSlider" href="/users/sign_in" >Créer mon itinéraire</a>
             <% end %>
@@ -19,18 +19,14 @@
             <li data-target="#myCarousel" data-slide-to="3"></li>
         </ul>
 
-        <!-- Wrapper for slides -->
+<!-- Wrapper for slides -->
         <div class="carousel-inner filtre-slider">
-
-
             <div class="item active slider-images">
-                <%= image_tag("slide4.jpg") %>
-            </div>
-
-            <div class="item slider-images">
                 <%= image_tag("slide2.jpg") %>
             </div>
-
+            <div class="item slider-images">
+                <%= image_tag("slide4.jpg") %>
+            </div>
             <div class="item slider-images">
                 <%= image_tag("slide1.jpg") %>
             </div>
@@ -58,21 +54,26 @@
 
 <section id="who" class="who section">
     <div class="container text-center">
-        <h2 class="title text-center">En visite à</h2>
+        <h2 class="title text-center">Villes les plus visitées</h2>
         <p class="intro text-center">Choisissez votre destination et un planning déjà prévu par d'autres voyageurs ou personnalisez-le avec le bouton "Mon Trip !". Enjoy !</p>
 
         <div class="row benefits text-center">
             <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12 box-home">
                 <div class="item-inner">
                     <h4 class="sub-title titre-box">Londres</h4>
+                    <a href="/map">
                     <%= image_tag("londres.jpg") %>
+                    </a>
+                
                 </div>
             </div>
             <!--//item-->
             <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12 box-home">
                 <div class="item-inner">
                     <h4 class="sub-title titre-box">Paris</h4>
+                    <a href="/map">
                     <%= image_tag("paris.jpg")%>
+                    </a>
                 </div>
                 <!--//item-inner-->
             </div>
@@ -80,7 +81,9 @@
             <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12 box-home">
                 <div class="item-inner">
                     <h4 class="sub-title titre-box">New-York</h4>
+                    <a href="/map">
                     <%= image_tag("new-york.jpg")%>
+                    </a>
                 </div>
                 <!--//item-inner-->
             </div>
@@ -88,7 +91,9 @@
             <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12 box-home">
                 <div class="item-inner">
                     <h4 class="sub-title titre-box">Los Angeles</h4>
+                    <a href="/map">
                     <%= image_tag("la.jpg")%>
+                    </a>
                 </div>
                 <!--//item-inner-->
             </div>

@@ -205,9 +205,7 @@ jQuery(function ($) {
     showResults = function (results, status) {
       
         $('#search-result').html('');
-      	$('.liste-page-maps .title-search').text('A '+ currentPlaceSearch + ', je souhaite visiter :');
-        $('.title-result-page-maps .title').text('Résultats de lieux pour '+ currentPlaceSearch);
-        
+      	$('.title-result-page-maps .title').text('Résultats de lieux pour '+ currentPlaceSearch);
 
         // Si on a une reponse du serveur
         if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -277,7 +275,7 @@ jQuery(function ($) {
                     linkClass = "";
                 }
                 
-                $('#search-result').append('<div id="' + placeId + '"class="item startup box-recherche website col-lg-3 col-md-4 col-sm-6"><div class="item-inner"><figure class="figure"><img class="box-result-img" src="' + placeCover + '" /></figure><div class="content text-left box-result-txt"><h3>' + placeName + '</h3><p>open : ' + placeOpen + '</p>' + rateOnFive + '<a href="#" id="' + placeId + '" class="add-trip '+ linkClass +'">'+linkText+'</a></p></div></div></div>'); // on renseigne la liste des resultats à l'endroit indiqué            
+                $('#search-result').append('<div id="' + placeId + '"class="item startup box-recherche website col-lg-3 col-md-4 col-sm-6"><div class="item-inner"><figure class="figure"><img src="' + placeCover + '" /></figure><div class="content text-left"><h3>' + placeName + '</h3><p>open : ' + placeOpen + '</p>' + rateOnFive + '<a href="#" id="' + placeId + '" class="add-trip '+ linkClass +'">'+linkText+'</a></p></div></div></div>'); // on renseigne la liste des resultats à l'endroit indiqué            
                 // on renseigne la liste des resultats à l'endroit indiqué
 
                 // Autosave test 
